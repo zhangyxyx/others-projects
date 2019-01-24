@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<meta name="renderer" content="webkit">
+		<title>bootstarp</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/common.css">
+		<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		  <script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+		  <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+		<script>
+		$(function(){
+			//第一屏的高度等于浏览器高度
+			var len=$(window).height();
+			console.log(len);
+			$(".first-screen").css("height",len+"px");
+			$(".first-screen .first_img1").css("margin-top",len*0.21+"px");
+			$(".first-screen .first_p1").css("margin-top",len*0.12+"px");
+			$(".first-screen .first_p2").css("margin-top",len*0.05+"px");
+			$(".first-screen .first_p3").css("margin-top",len*0.03+"px");
+			$(".first-screen input").css("margin-top",len*0.1+"px");
+			
+			//第一屏的向下的箭头
+			setInterval(function(){
+				var down_top=parseFloat($(".first_img2").css("top"));
+				$(".first_img2").css("opacity","1");
+				$(".first_img2").animate({"top":len*0.95+"px"},1000,function(){
+					$(".first_img2").css("top",len*0.9+"px");
+					$(".first_img2").css("opacity","0");
+				});
+			},2000);
+			//导航
+			var top=$(".first-screen").height();
+			$(window).on("scroll",function(){
+				
+			});
+			//第二屏鼠标移入
+			$(".two_con .row div").mouseover(function(){
+		 		var index=$(this).index();
+		 		$(".two_con_tit").eq(index).css("border","3px solid #ada074");
+	 		});
+	 		//第三屏鼠标移入图片有遮罩
+	 		$(".three_screen .row div").mouseenter(function(){
+		 		var index=$(this).index();
+		 		console.log(index);
+		 		var W=$(".three_screen .row img").eq(index).width();
+		 		var H=$(".three_screen .row img").eq(index).height();
+		 		$(".three_screen .row p").eq(index).css("width",W+"px");
+		 		$(".three_screen .row p").eq(index).css("height",H+"px");
+		 		$(".three_screen .row p").eq(index).animate({"opacity":0.5});
+		 	}).mouseleave(function(){
+		 		var index=$(this).index();
+		 		console.log(index);
+		 		$(".three_screen .row p").eq(index).animate({"opacity":0});
+		 	});
+		});
+		</script>
+		<style>
+		/*<!--第一屏-->*/
+		.first-screen{color:#fff;text-align:center;background:url(img/background/start-page.jpg);position:relative;}
+		.first-screen .first_p2{width:105px;height:4px;background:#fff;margin:0 auto;}
+		.first-screen .btn{font-size:16px;width:180px;height:45px;opacity:0.4;background:#fff;border:2px solid #fff;}
+		.first_img2{position:absolute;left:50%;top:90%;}
+		/*导航*/
+		.collapse{float:right;line-height:60px;}
+		.collapse li{padding-left:43px;}
+		/*第二屏*/
+		.two_screen{width:899px;margin:0 auto;}
+		.two_screen .two_top{width:236px;text-align:center;margin:50px auto;}
+		.two_con .row div{text-align:center;cursor:pointer;margin-bottom:140px;}
+		.two_con .two_con_tit{width:94px;height:94px;margin:0 auto;border-radius:50%;border:3px solid #ccc;text-align:center;line-height:94px;cursor:pointer;}
+		/*第三屏*/
+		.three_screen{background:#ccc;}
+		 .three_screen .row div{padding:0px;position:relative;cursor:pointer;}
+		 .three_screen .row div p{position:absolute;left:0px;top:0px;background:#ada074;opacity:0;}
+		 .three_screen .btn{font-size:16px;width:180px;height:45px;opacity:0.4;border:2px solid #000;margin:98px auto;}
+		 
+		</style>
+	</head>
+	<body>
+	<!--第一屏-->
+	<div class="first-screen">
+		<img src="img/logo.png" class="first_img1">
+		<p class="first_p1" style="font-size:45px;">CREATIVE BRANDING</p>
+		<p class="first_p2"></p>
+		<p class="first_p3" style="font-size:16px;">Please familiarize yourself with our offer</p>
+		<p class="btn">READ MORE</p>
+		<img src="img/arrow-down.png" class="first_img2">
+	</div>
+	<!--导航-->
+	<div class="bs-example" data-example-id="embedded-scrollspy" >
+	    <nav id="navbar-example2" class=" navbar navbar-default navbar-static">
+	      <div class="container-fluid">
+	        <div class="navbar-header">
+	          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-scrollspy">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#">Project Name</a>
+	        </div>
+	        <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy" style="float:right;">
+	          <ul class="nav navbar-nav">
+	            <li class="active">HOME </li>
+	            <li>ABOUT US</li>
+	            <li>PORTFOLIO</li>
+	            <li>CONTACT</li>
+	          </ul>
+	        </div>
+	      </div>
+	    </nav>
+	 </div>
+	 <!--第二屏-->
+	 <div class="two_screen">
+	 	<div class="two_top">
+		 	<p style="font-size:34px;">ABOUT US</p>
+		 	<p style="width:105px;height:4px;background:#000;margin:10px auto 10px;"></p>
+		 	<p style="color:#a4a4a4;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+	 	</div>
+	 	<div class="two_con">
+	 		<div class="row">
+	 			<div class="col-xs-12  col-md-4 ">
+	 				<p class="two_con_tit"><img src="img/icons/responsive.png"></p>
+	 				<p style="font-size:34px;margin:57px 0 37px 0;">RESPONSIVE</p>	
+	 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+	 			</div>
+	 			<div class="col-xs-12 col-md-4">
+	 				<p class="two_con_tit"><img src="img/icons/minimalist.png"></p>
+	 				<p style="font-size:34px;margin:57px 0 37px 0;">RESPONSIVE</p>	
+	 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+	 			</div>
+	 			<div class="col-xs-12 col-md-4">
+	 				<p class="two_con_tit"><img src="img/icons/free.png"></p>
+	 				<p style="font-size:34px;margin:57px 0 37px 0;">RESPONSIVE</p>	
+	 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+	 			</div>
+	 		</div>
+	 	</div>
+	 </div>
+	 <!--第三屏-->
+	 <div class="three_screen">
+	 	<div style="width:899px;margin:0 auto;">
+		 	<p style="font-size:34px;padding-top:188px;text-align:center;">PORTFOLIO</p>
+		 	<p style="width:105px;height:4px;background:#000;margin:40px auto 76px;"></p>
+		 	<div class="row" >
+		 		<div class="col-xs-12 col-sm-6 col-md-4"><img src="img/portfolio/1.png"><p></p></div>
+		 		<div class="col-xs-12 col-sm-6 col-md-4"><img src="img/portfolio/2.png"><p></p></div>
+		 		<div class="col-xs-12 col-sm-6 col-md-4"><img src="img/portfolio/3.png"><p></p></div>
+		 		<div class="col-xs-12 col-sm-6 col-md-4"><img src="img/portfolio/4.png"><p></p></div>
+		 		<div class="col-xs-12 col-sm-6 col-md-4"><img src="img/portfolio/5.png"><p></p></div>
+		 		<div class="col-xs-12 col-sm-6 col-md-4"><img src="img/portfolio/6.png"><p></p></div>
+		 		<div class="col-xs-12 col-sm-6 col-md-4"><img src="img/portfolio/7.png"><p></p></div>
+		 		<div class="col-xs-12 col-sm-6 col-md-4"><img src="img/portfolio/8.png"><p></p></div>
+		 		<div class="col-xs-12 col-sm-6 col-md-4"><img src="img/portfolio/9.png"><p></p></div>
+		 		<div class="col-xs-12 col-sm-6 col-md-4"><img src="img/portfolio/10.png"><p></p></div>
+		 		<div class="col-xs-12 col-sm-6 col-md-4"><img src="img/portfolio/11.png"><p></p></div>
+		 	</div>
+		 	<p class="btn">READ MORE</p>
+	 	</div>
+	 </div>
+	
+	</body>
+</html>

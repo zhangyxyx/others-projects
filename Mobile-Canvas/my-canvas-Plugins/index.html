@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用canvas实现各种图形</title>
+    <style>
+    *{margin:0px;padding:0px;}
+    #mycanvas{ border:1px solid #000}
+    </style>
+</head>
+<body>
+<canvas id="mycanvas" width="600" height="700"></canvas>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/main.js"></script>
+<script>
+$(function(){
+    //矩形 圆形 线段 不规则图形（可以用线段）
+    var json={//矩形
+        x:0,
+        y:0,
+        w:150,
+        h:75,
+        color:'#0066CC'
+    }
+    $("#mycanvas").rect(json);
+    var json1={//另一个矩形
+        x:400,
+        y:200,
+        w:150,
+        h:75,
+        color:'#00CCCC'
+    }
+    $("#mycanvas").rect(json1);
+
+    var json2={//圆形
+         x:100,
+         y:200 ,
+         r:50,
+         start:0,
+         end:2*Math.PI,  
+        color:'#666699'
+    }
+    $("#mycanvas").ellipse(json2)
+
+    var json3={//线段
+        m:{
+         x:200,
+         y:300   
+        },
+        l:[
+            {x:220,y:320},
+            {x:240,y:300},
+            {x:200,y:300}
+        ],
+        color:'red'
+    }
+    $("#mycanvas").path(json3)
+})
+
+</script>
+</body>
+</html>

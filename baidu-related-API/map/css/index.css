@@ -1,0 +1,50 @@
+/*服务*/
+.ser_right{font-size:16px;color:#999;}
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th{border-top:none;}
+.ser_right{margin:220px 0;}
+.ser_right table td span{font-size:20px;}
+/*第三部分*/
+.con img{width:100%;height:100%;}
+.con .row div{padding:0px;height:439px;position:relative;}
+.con .row div p{display:none;width:100%;height:119px;background:red;color:#fff;line-height:119px;position:absolute;left:0px;bottom:0px;}
+/*队伍*/
+.team{width:1162px;margin:128px auto;}
+.team_every{padding:0px;position:relative;height:562px;}
+.team_every img{margin:0 auto;}
+.team_every .every_top{margin:10px ;display:none;}
+.team_every .every_con{position:absolute;left:10%;top:10%;}
+.team_every .every_foot{text-align:center;color:#fff;position:absolute;left:0px;bottom:0px;}
+.team_every .every_foot span{display:block;width:100%;padding-top:20px;}
+.every_active{border:7px solid #ff504e;}
+.team_every.every_active{margin-top:10px;}
+.team_every.every_active .every_foot{width:100%;height:120px;background:#ff504e;} 
+.team_every.every_active .every_top{display:block;}
+/*第四部分*/
+.box .row div{height:205px;line-height:205px;padding:0px;}
+.box .row div img{width:100%;height:100%;}
+/*联系*/
+.concat{width:1167px;margin:104px auto 104px;}
+.concat_every span{float:left;}
+.concat_every div{float:left;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+/*head*/
+.head{width:960px;height:46px;line-height:46px;background:#0767c8;color:#fff;margin:0 auto;}
+.head .head-left{margin-left:40px;float:left;}
+.head .head-left div a{font-size:14px;padding:0px 20px;cursor:pointer;}
+.head .head-right{margin-right:40px;float:right;}
+/*content*/
+.content{width:960px;margin:0 auto;}
+.content .content-left{width:632px;float:left;}
+.content .content-right{widtH:270px;float:right;}
+
+.content-left-title{margin-top:20px;}
+.content-left-title span{display:block;width:112px;height:50px;line-height:50px;float:left;text-align:center;color:#6c829f;}
+/*回到顶部*/
+.scrollTop{width:50px;height:50px;position:fixed;right:0px;bottom:0px;}
+/*列表*/
+.list-demo{width:auto; display:inline-block !important; display:inline; padding:10px 0px;border-bottom:1px solid #ccc;}
+.list-demo-left{width:38px;height:38px;float:left;}
+.list-demo-left img{width:100%;height:100%;}
+.list-demo-right{width:584px;float:left;margin-left:10px;}
+.list-demo-right span{display:block;}
+/*右边*/
+.content-active{padding:10px 0px; border-bottom:1px solid #ccc;}
+.content-active span{display:block;height:28px;line-height:28px;color:#666;}

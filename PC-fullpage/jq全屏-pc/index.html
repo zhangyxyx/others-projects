@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<title>全屏</title>
+		
+		<script src="js/jquery.js"></script>
+		<script src="js/fullpage.min.js"></script>
+		<link rel="stylesheet" href="css/fullPages.css"/>
+		<style type="text/css">
+	        body
+	        {
+	            color: #FFFFFF;
+	        }
+	        *{margin:0px;}
+	    </style>
+	    
+	    <script>
+		$(function() {
+		    $("#ido").fullpage(
+		        {
+		            continuousVertical: true
+		        });
+		});
+
+	    </script>
+	</head>
+	<body class="fp-viewing-1">
+	<div id="ido">
+	    <div class="section section1 active">
+	        <img src="img/screen1.jpg" style="width:100%;height:100%;">
+	    </div>
+	    <div class="section section2">
+	        <img src="img/screen2.jpg" style="width:100%;height:100%;">
+	    </div>
+	    <div class="section section3 ">
+	        <img src="img/screen3.jpg" style="width:100%;height:100%;">
+	    </div>
+	    <div class="section section4">
+	       <img src="img/screen4.jpg" style="width:100%;height:100%;">
+	    </div>
+	</div>
+
+	</body>
+</html>

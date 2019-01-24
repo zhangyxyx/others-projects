@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+		<title>canvas</title>
+		
+	</head>
+	<body style="background:#000;">
+	<canvas id="mycanvas" width="800" height="700"    style="background:#fff;"></canvas>	
+	<script>
+		var mygd=document.querySelector("#mycanvas");
+		var gd=mygd.getContext("2d");
+		// 步进
+		var step = 1
+		// 动画间隔时间
+		var intervalTime = 30
+		// 当前移动距离
+		var currentDistance = 70
+		// 最大移动距离
+		var maxDistance = 200
+		
+		setInterval(function() {
+			gd.clearRect(0,0,mygd.width,mygd.height);//必须加范围
+			gd.beginPath();
+			gd.fillStyle="red";
+		    // 超过最大距离时反向运动
+		    if (currentDistance >= maxDistance) {
+		        step = -step
+		    }
+		    // 小于0时反向运动
+		    if (currentDistance <= 0) {
+		        step = -step
+		    }
+		    currentDistance += step;
+		    gd.fillRect(currentDistance,90,150,75);
+		    gd.closePath(); 
+		}, intervalTime);
+		
+		/*setInterval(function(){
+			
+			gd.clearRect(0,0,mygd.width,mygd.height);//必须加范围
+			gd.beginPath();
+			gd.fillStyle="red";
+			var speed=(400-x)/100;
+			if(speed>1){
+				x=x+speed;
+				y=y+speed;
+				gd.fillRect(x,y,150,75);
+			}else if(speed<2){
+				x=x-speed;
+				y=y-speed;
+				gd.fillRect(x,y,150,75);
+			}
+			console.log(speed);
+			gd.closePath();
+			
+		},30);*/
+		
+		</script>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+$blue:#007fff;
+@mixin wh($w,$h){
+    width:$w;
+    height:$h
+}
+@mixin fz($size,$color){
+    font-size:$size;
+    color:$color
+}
+@mixin left{
+    float:left;
+}
+@mixin right{
+    float:right
+}

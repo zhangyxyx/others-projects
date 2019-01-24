@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用canvas实现各种图形</title>
+    <style>
+    *{margin:0px;padding:0px;}
+    #mycanvas{ border:1px solid #000;floaT:left;}
+    </style>
+</head>
+<body>
+<button class="btn" style="width:90px;height:40px;background:red;color:#fff;float:left;">开始走路</button>
+<canvas id="mycanvas" width="600" height="700"></canvas>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/main.js"></script>
+<script>
+$(function(){
+    //var c1=document.getElementById('mycanvas');
+$(".btn").click(function(){
+    var n=0;
+    setInterval(function(){
+        n+=5;
+        move(n)
+    },1000)
+})
+function move(n){
+    //头
+    var c1=document.getElementById('mycanvas');
+    var gd1=c1.getContext('2d');
+    gd1.clearRect(0,0,600,700);  
+    gd1.beginPath();
+    gd1.fillStyle='red';
+    gd1.arc(100+n,50,30,0,360);
+    gd1.fill();
+    gd1.closePath();
+    //身体
+    var canvas = document.getElementById('mycanvas');  
+    var ctx = canvas.getContext('2d');
+    ctx.beginPath();
+    ctx.moveTo(100+n,80);
+    ctx.lineTo(100+n,135);
+    ctx.closePath();
+    ctx.stroke();
+    //左胳膊
+    var c2 = document.getElementById('mycanvas');
+    var gd2 = c2.getContext('2d');
+    gd2.beginPath();
+    gd2.moveTo(100+n,80);
+    gd2.lineTo(70+n,125);
+    gd2.closePath();
+    gd2.stroke();
+    //右胳膊
+    var c3 = document.getElementById('mycanvas');
+    var gd3 = c3.getContext('2d');
+    gd3.beginPath();
+    gd3.moveTo(100+n,80);
+    gd3.lineTo(130+n,125);
+    gd3.closePath();
+    gd3.stroke();
+    //左腿
+    var c4 = document.getElementById('mycanvas');
+    
+    var gd4 = c4.getContext('2d');
+    gd4.beginPath();
+    gd4.moveTo(100+n,135);
+    gd4.lineTo(70+n,165);
+    gd4.closePath();
+    gd4.stroke();
+    //右腿
+    var c5 = document.getElementById('mycanvas');
+    var gd5 = c5.getContext('2d');
+    gd5.beginPath();
+    gd5.moveTo(100+n,135);
+    gd5.lineTo(130+n,165);
+    gd5.closePath();
+    gd5.stroke();
+}
+})
+</script>
+</body>
+</html>

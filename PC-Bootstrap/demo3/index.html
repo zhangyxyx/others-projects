@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<meta name="renderer" content="webkit">
+		<title>关于我们</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/common.css">
+		<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		  <script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+		  <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+		<title>响应式</title>
+		<style>
+		.top{background:url(img/bg.jpg) no-repeat;min-width:1100px;height:950px;}	
+		.top_one{height:102px;color:#fff;line-height:102px;font-size:15px;width:1100px;margin:0 auto;}	
+		.top_one p{float:left;}
+		.top_three{widtH:700px;margin:0 auto;}
+		.top_three .one{width:700px;margin-top:160px;}
+		.top_three .one p{width:102px;height:102px;border-radius:50%;border:1px solid #838383;overflow:hidden;}
+		.top_three .one p img{widtH:50%;height:50%;display:block;margin:25% auto 0;}
+		.top_three .two{width:700px;font-size:30px;color:#fff;text-align:center;margin-top:34px;}
+		.top_three .three{width:700px;font-size:12px;color:#b9b9b9;margin-top:34px;}
+		.top_three .four{width:700px;font-size:12px;color:#fff;margin-top:34px;}
+		.top_three .four p{text-align:center;margin:0 auto;width:183px;height:40px;line-height:40px;border-radius:40px;border:1px solid #fff;}
+		/*内容*/
+		.con{width:1100px;margin:-250px auto 0;}
+		/*书籍分类*/
+		.sjfl{width:1100px;margin:0 auto 79px;}
+		.sjfl_tit{width:250px;height:48px;margin:88px auto 88px;border:1px solid #ad5357;border-radius:50px;font-size:20px;color:#666;text-align:center;line-height:48px;}
+		.sjfl_con{width:1100px;margin:0 auto;}
+		/*我们的服务*/
+		.wmfw{min-width:1100px;height:485px;background:url(img/wmfw_bg.png) no-repeat;}
+		.sjzs{width:1100px;margin:0 auto;}
+		.sjzs_tit{width:250px;height:48px;margin:88px auto 88px;border:1px solid #ad5357;border-radius:50px;font-size:20px;color:#666;text-align:center;line-height:48px;}
+		/*书籍作者*/
+		.sjzz{width:1100px;margin:0 auto;}
+		.sjzz_tit{width:250px;height:48px;margin:88px auto 88px;border:1px solid #ad5357;border-radius:50px;font-size:20px;color:#666;text-align:center;line-height:48px;}
+		/*尾部*/
+		.iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+        .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+		</style>
+	</head>
+	<body>
+	<div class="top">
+		<div class="row top_one">
+			<div class="col-xs-6">
+					<p>关注</p>
+					<p>收藏</p>
+			</div>
+			<div class="col-xs-6" style="text-align:right;">
+					<p>登录</p>
+					<p>注册</p>
+			</div>
+		</div>
+		<div class="nav" style="width:1100px;height:57px;line-height:57px;margin:0 auto;">
+			<div class="bs-example">
+			    <nav id="navbar-example" class="navbar navbar-default navbar-static" >
+			      <div class="container-fluid" >
+			        <div class="navbar-header">
+			          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-collapse">
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			          </button>
+			          <a class="navbar-brand" href="#">Project Name</a>
+			        </div>
+			        <div class="collapse navbar-collapse bs-example-js-navbar-collapse" >
+			          <ul class="nav navbar-nav">
+			            <li class="dropdown">
+			              <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			                	首页
+			              </a>
+			            </li>
+			            <li class="dropdown">
+			              <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			               	关于书籍
+			              </a>
+			            </li>
+			            <li class="dropdown">
+			              <a id="drop3" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			                                  书籍中心
+			              </a>
+			            </li>
+			            <li class="dropdown">
+			              <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			               	关于我们
+			              </a>
+			            </li>
+			            <li class="dropdown">
+			              <a id="drop5" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			               	联系我们
+			              </a>
+			            </li>
+			          </ul>
+			          <ul class="nav navbar-nav navbar-right">
+			            <form class="form-inline">
+						  <div class="form-group">
+						    <input type="type" class="form-control" id="exampleInputEmail2" placeholder="搜索">
+						  </div>
+						  <button type="submit" class="btn btn-default">搜索</button>
+						</form>
+			          </ul>
+			        </div>
+			      </div>
+			    </nav> 
+			  </div>
+		</div>
+		<!--顶部内容-->
+		<div class="top_three row">
+			<div class="col-xs-12 one">
+				<div class="row">
+					<div class="col-xs-3"><p><img src="img/top_three1.png"></p></div>
+					<div class="col-xs-3"><p><img src="img/top_three2.png"></p></div>
+					<div class="col-xs-3"><p><img src="img/top_three1.png"></p></div>
+					<div class="col-xs-3"><p><img src="img/top_three2.png"></p></div>
+				</div>
+			</div>
+			<div class="col-xs-12 two">
+				<p>走进别人的世界，探寻自己的宇宙</p>
+			</div>
+			<div class="col-xs-12 three">
+				<p>原研哉说：我是一个设计师，可是设计师不代表是一个很会设计的人，而是一个抱持设计概念来过生活的人、活下去的人。就似是一个园子里收拾整理的园丁一样， 我每天都在设计园子里做设计的果实，所以不论是设计一件好的产品、或是整理设计的概念、思考设计的本质、抑或以写作去传播设计理论，都是一个设计师必须要 做的工作。</p>
+			</div>
+			<div class="col-xs-12 four">
+				<p>ABOUTS US</p>
+			</div>
+		</div>
+	</div>
+	<!--内容-->
+	<div class="row con">
+		<div class="col-xs-4" style="background:#ad5357;height:250px;text-align:center;">
+			<p style="margin:20px auto 30px;"><img src="img/con1.png"></p>
+			<p style="font-size:17px;color:#fff;margin-bottom:24px;">书是人类进步的阶梯 让我们在无穷的书店里探索无穷的真理</p>
+			<p style="width:42px;height:42px;border-radius:50%;border:1px solid #fff;margin:0 auto;text-align:center;line-height:42px;">
+				<span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="color:#fff;"></span>
+			</p>
+		</div>
+		<div class="col-xs-4" style="background:#fff;height:250px;text-align:center;">
+			<p style="margin:20px auto 30px;font-size:16px;">世界化的设计是不存在的是不合逻辑的 </p>
+			<p style="font-size:17px;margin-bottom:24px;">做设计不应该只看短期反应，而着眼于长远的教育性理想：若每一个设计师都有这一种追求，市场的品味、对设计的感受性就会…</p>
+			<p style="width:42px;height:42px;border-radius:50%;border:1px solid #ad5357;margin:0 auto;text-align:center;line-height:42px;">
+				<span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="color:#ad5357;"></span>
+			</p>
+		</div>
+		<div class="col-xs-4" style="background:#ad5357;height:250px;text-align:center;">
+			<p style="margin:20px auto 30px;"><img src="img/con1.png"></p>
+			<p style="font-size:17px;color:#fff;margin-bottom:24px;">书是人类进步的阶梯 让我们在无穷的书店里探索无穷的真理</p>
+			<p style="width:42px;height:42px;border-radius:50%;border:1px solid #fff;margin:0 auto;text-align:center;line-height:42px;">
+				<span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="color:#fff;"></span>
+			</p>
+		</div>
+		<div class="col-xs-4" style="background:#fff;height:250px;text-align:center;">
+			<p style="margin:20px auto 30px;font-size:16px;">世界化的设计是不存在的是不合逻辑的 </p>
+			<p style="font-size:17px;margin-bottom:24px;">做设计不应该只看短期反应，而着眼于长远的教育性理想：若每一个设计师都有这一种追求，市场的品味、对设计的感受性就会…</p>
+			<p style="width:42px;height:42px;border-radius:50%;border:1px solid #ad5357;margin:0 auto;text-align:center;line-height:42px;">
+				<span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="color:#ad5357;"></span>
+			</p>
+		</div>
+		<div class="col-xs-4" style="background:#ad5357;height:250px;text-align:center;">
+			<p style="margin:20px auto 30px;"><img src="img/con1.png"></p>
+			<p style="font-size:17px;color:#fff;margin-bottom:24px;">书是人类进步的阶梯 让我们在无穷的书店里探索无穷的真理</p>
+			<p style="width:42px;height:42px;border-radius:50%;border:1px solid #fff;margin:0 auto;text-align:center;line-height:42px;">
+				<span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="color:#fff;"></span>
+			</p>
+		</div>
+		<div class="col-xs-4" style="background:#fff;height:250px;text-align:center;">
+			<p style="margin:20px auto 30px;font-size:16px;">世界化的设计是不存在的是不合逻辑的 </p>
+			<p style="font-size:17px;margin-bottom:24px;">做设计不应该只看短期反应，而着眼于长远的教育性理想：若每一个设计师都有这一种追求，市场的品味、对设计的感受性就会…</p>
+			<p style="width:42px;height:42px;border-radius:50%;border:1px solid #ad5357;margin:0 auto;text-align:center;line-height:42px;">
+				<span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="color:#ad5357;"></span>
+			</p>
+		</div>
+	</div>
+	<!--书籍分类-->
+	<div class="sjfl">
+		<p class="sjfl_tit">书籍分类</p>
+		<div class="sjfl_con row">
+			<div class="col-xs-4" style="height:430px;border-right:1px solid #ad5357">
+				<p style="width:180px;height:180px;border-radius:50%;overflow:hidden;margin:0 auto;"><img src="img/sjfl_bg.png" style="width:100%;height:100%;"></p>
+				<p style="margin:32px 0 28px 0;">《设计中的设计》[日] 原研哉。设计到底是什么?为了给出自己的答案,他回顾了现代设计的发展历程,并且策划了"re-design-二十一世纪的日常用品再设计"展览,通过与许多设计师的互动来思考设计与日常生活的关系.设计在哪里?最令我们视而不见,习焉不察,而恰恰又离不开的大概就是设计了。</p>
+				<p style="width:42px;height:42px;border-radius:50%;border:1px solid #ad5357;margin:0 auto;text-align:center;line-height:42px;">
+					<span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="color:#ad5357;"></span>
+				</p>
+			</div>
+			<div class="col-xs-4" style="height:430px;border-right:1px solid #ad5357">
+				<p style="width:180px;height:180px;border-radius:50%;overflow:hidden;margin:0 auto;"><img src="img/sjfl_bg.png" style="width:100%;height:100%;"></p>
+				<p style="margin:32px 0 28px 0;">《设计中的设计》[日] 原研哉。设计到底是什么?为了给出自己的答案,他回顾了现代设计的发展历程,并且策划了"re-design-二十一世纪的日常用品再设计"展览,通过与许多设计师的互动来思考设计与日常生活的关系.设计在哪里?最令我们视而不见,习焉不察,而恰恰又离不开的大概就是设计了。</p>
+				<p style="width:42px;height:42px;border-radius:50%;border:1px solid #ad5357;margin:0 auto;text-align:center;line-height:42px;">
+					<span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="color:#ad5357;"></span>
+				</p>
+			</div>
+			<div class="col-xs-4" style="height:430px;">
+				<p style="width:180px;height:180px;border-radius:50%;overflow:hidden;margin:0 auto;"><img src="img/sjfl_bg.png" style="width:100%;height:100%;"></p>
+				<p style="margin:32px 0 28px 0;">《设计中的设计》[日] 原研哉。设计到底是什么?为了给出自己的答案,他回顾了现代设计的发展历程,并且策划了"re-design-二十一世纪的日常用品再设计"展览,通过与许多设计师的互动来思考设计与日常生活的关系.设计在哪里?最令我们视而不见,习焉不察,而恰恰又离不开的大概就是设计了。</p>
+				<p style="width:42px;height:42px;border-radius:50%;border:1px solid #ad5357;margin:0 auto;text-align:center;line-height:42px;">
+					<span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="color:#ad5357;"></span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!--我们的服务-->
+	<div class="wmfw">
+		<p style="width:1100px;height:200px;text-align:center;margin:0 auto;line-height:200px;color:#fff;font-size:20px;text-align:center;">我们的服务</p>
+		<div class="row" style="width:1100px;margin:0 auto;">
+			<div class="col-xs-4" style="text-align:center;">
+				<p style="margin:0 auto;width:105px;height:105px;line-height:105px;border-radius:50%;border:1px solid #e4b5a1"><img src="img/con1.png"></p>
+				<p style="color:#fff;margin:30px 0 10px 0;">关于书籍</p>
+				<p style="color:#e4b5a1">本店销量可高达12580万本/年</p>
+			</div>
+			<div class="col-xs-4" style="text-align:center;">
+				<p style="margin:0 auto;width:105px;height:105px;line-height:105px;border-radius:50%;border:1px solid #e4b5a1"><img src="img/con1.png"></p>
+				<p style="color:#fff;margin:30px 0 10px 0;">关于书籍</p>
+				<p style="color:#e4b5a1">本店销量可高达12580万本/年</p>
+			</div>
+			<div class="col-xs-4" style="text-align:center;">
+				<p style="margin:0 auto;width:105px;height:105px;line-height:105px;border-radius:50%;border:1px solid #e4b5a1"><img src="img/con1.png"></p>
+				<p style="color:#fff;margin:30px 0 10px 0;">关于书籍</p>
+				<p style="color:#e4b5a1">本店销量可高达12580万本/年</p>
+			</div>
+		</div>
+	</div>
+	<!--书籍展示-->
+	<div class="sjzs">
+		<p class="sjzs_tit">书籍展示</p>
+		<div class="row">
+			<div class="col-xs-3" style="background:#e6e5e5;height:290px;">
+				<p style="width:211px;height:150px;margin:20px auto 0;"><img src="img/sjfl_bg.png" style="widtH:100%;height:100%;"></p>
+				<p style="width:50px;height:50px;margin:50px auto 0;border:1px solid #ad5357;border-radius:50%;line-height:50px;text-align:center;">
+					<span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:#ad5357;"></span>
+				</p>
+			</div>
+			<div class="col-xs-3" style="background:#e6e5e5;height:290px;">
+				<p style="width:211px;height:150px;margin:20px auto 0;"><img src="img/sjfl_bg.png" style="widtH:100%;height:100%;"></p>
+				<p style="width:50px;height:50px;margin:50px auto 0;border:1px solid #ad5357;border-radius:50%;line-height:50px;text-align:center;">
+					<span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:#ad5357;"></span>
+				</p>
+			</div>
+			<div class="col-xs-3" style="background:#e6e5e5;height:290px;">
+				<p style="width:211px;height:150px;margin:20px auto 0;"><img src="img/sjfl_bg.png" style="widtH:100%;height:100%;"></p>
+				<p style="width:50px;height:50px;margin:50px auto 0;border:1px solid #ad5357;border-radius:50%;line-height:50px;text-align:center;">
+					<span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:#ad5357;"></span>
+				</p>
+			</div>
+			<div class="col-xs-3" style="background:#e6e5e5;height:290px;">
+				<p style="width:211px;height:150px;margin:20px auto 0;"><img src="img/sjfl_bg.png" style="widtH:100%;height:100%;"></p>
+				<p style="width:50px;height:50px;margin:50px auto 0;border:1px solid #ad5357;border-radius:50%;line-height:50px;text-align:center;">
+					<span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:#ad5357;"></span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!--书籍作者-->
+	<div class="sjzz">
+		<p class="sjzz_tit">书籍作者</p>
+		<div class="row">
+			<div class="col-xs-6" style="background:#e6e5e5;height:290px;">
+				<p style="width:211px;height:150px;margin:20px auto 0;"><img src="img/sjfl_bg.png" style="widtH:100%;height:100%;"></p>
+				<p style="width:50px;height:50px;margin:50px auto 0;border:1px solid #ad5357;border-radius:50%;line-height:50px;text-align:center;">
+					<span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:#ad5357;"></span>
+				</p>
+			</div>
+			<div class="col-xs-6" style="height:290px;">
+				<p style="font-size:20px;color:#bd7c5f;">原研哉的设计观点</p>
+				<p style="font-size:14px;color:#666;">原研哉说：我是一个设计师，可是设计师不代表是一个很会设计的人，而是一个抱持设计概念来过生活的人、活下去的人。就似是一个园子里收拾整理的园丁一样， 我每天都在设计园子里做设计的果实，所以不论是设计一件好的产品、或是整理设计的概念、思考设计的本质、抑或以写作去传播设计理论，都是一个设计师必须要 做的工作。我们在强调团队的使命及共性的时候，团队个体的使命及思考应该得到充分的尊重和鼓励。做设计不应该只看短期反应，而着眼于长远的教育性理想…</p>
+				<p style="width:50px;height:50px;margin:50px auto 0;border:1px solid #ad5357;border-radius:50%;line-height:50px;text-align:center;">
+					<span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:#ad5357;"></span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!--书籍作者-->
+	<div class="sjzz">
+		<p class="sjzz_tit">书籍作者</p>
+		<div class="row">
+			<div class="col-xs-3" style="background:#e6e5e5;height:290px;">
+				<p style="width:211px;height:150px;margin:20px auto 0;"><img src="img/sjfl_bg.png" style="widtH:100%;height:100%;"></p>
+				<p style="width:50px;height:50px;margin:50px auto 0;border:1px solid #ad5357;border-radius:50%;line-height:50px;text-align:center;">
+					<span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:#ad5357;"></span>
+				</p>
+			</div>
+			<div class="col-xs-3" style="background:#e6e5e5;height:290px;">
+				<p style="width:211px;height:150px;margin:20px auto 0;"><img src="img/sjfl_bg.png" style="widtH:100%;height:100%;"></p>
+				<p style="width:50px;height:50px;margin:50px auto 0;border:1px solid #ad5357;border-radius:50%;line-height:50px;text-align:center;">
+					<span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:#ad5357;"></span>
+				</p>
+			</div>
+			<div class="col-xs-3" style="background:#e6e5e5;height:290px;">
+				<p style="width:211px;height:150px;margin:20px auto 0;"><img src="img/sjfl_bg.png" style="widtH:100%;height:100%;"></p>
+				<p style="width:50px;height:50px;margin:50px auto 0;border:1px solid #ad5357;border-radius:50%;line-height:50px;text-align:center;">
+					<span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:#ad5357;"></span>
+				</p>
+			</div>
+			<div class="col-xs-3" style="background:#e6e5e5;height:290px;">
+				<p style="width:211px;height:150px;margin:20px auto 0;"><img src="img/sjfl_bg.png" style="widtH:100%;height:100%;"></p>
+				<p style="width:50px;height:50px;margin:50px auto 0;border:1px solid #ad5357;border-radius:50%;line-height:50px;text-align:center;">
+					<span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:#ad5357;"></span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!--尾部-->
+	<div class="footer" style="background:url(img/footer_bg.png) no-repeat;min-width:1100px;">
+		<div class="row" style="width:1100px;margin:0 auto;text-align:center;">
+			<div class="col-xs-6">
+				<p style="width:73px;height:73px;margin:30px auto;"><img src="img/sjfl_bg.png" style="width:100%;height:100%;"></p>
+				<p style="font-size:16px;color:#fff;">名人书籍</p>
+				<p style="font-size:16px;color:#fff;">他以一双无视外部世界飞速发展变化的眼睛面对“日常生活”，以谦虚但同时尖锐的目光寻找其设计被需要的所在，并将自己精确地安置在他的意图能够被赋予生命的地方。当我们的日常生活正在越来越陷入自身窠臼之时，他敏锐地感知到了设计的征候和迹象，并且自觉自主地挑战其中的未知领域…</p>
+			</div>
+			<div class="col-xs-6">
+				 <div style="width:550px;height:518px;border:#ccc solid 1px;" id="dituContent"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+	<script>
+	//创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(116.361555,39.99391);//定义一个中心点坐标
+        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"我的位置",content:"我的备注",point:"116.3616|39.993993",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+	</script>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-1.7.2.js"></script>
+		<script src="http://api.map.baidu.com/place/v2/search"></script>
+	</head>
+	<body>
+	<script>
+	$(function(){
+		$.ajax({
+			url:'http://api.map.baidu.com/place/v2/eventsearch?query=美食&event=groupon&region=131&bounds=39.915,116.404,39.935,116.435&output=json&page_size=1&ak=rtAswtQj5W5yOSjAeXUbRmKfFSs69AHb',
+			type:'GET',  
+	        async:false,  
+	        dataType:'jsonp', 
+			success:function(data){
+				console.log(data);
+				console.log(data.results[0].events[0].groupon_image);
+			},
+		});
+	});
+	</script>
+	</body>
+</html>
