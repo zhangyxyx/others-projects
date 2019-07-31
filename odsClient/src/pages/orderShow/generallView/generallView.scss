@@ -1,0 +1,260 @@
+@import "../../../asset/style/dominant.scss";
+.generallViewBox{
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+  >div{
+    &.condition{
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+      >div{
+        &.header{
+          background-color: $header-bgColor;
+          border-bottom: 1px solid $border-color;
+          height: $header-height;
+          line-height: $header-height;
+          >span{
+            margin-left: $title-paddding;
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+      }
+      >ul{
+        padding: 20px $title-paddding 0 $title-paddding;
+        >li{
+          margin-bottom: 20px;
+          display: inline-block;
+          >label{
+            display: inline-block;
+            font-size: 14px;
+            width: $label-width;
+            text-align: right;
+            padding-left: 20px;
+            margin-right: 10px;
+          }
+          >div{
+            display: inline-block;
+            &.inputControl{
+              width: $input-width;
+              height: $input-height;
+              border: 1px solid $input-borderColor;
+              border-radius: $border-radius;
+              position: relative;
+              >input{
+                width: 100%;
+                height: $input-height;
+                line-height: $input-height;
+                border-radius: $border-radius;
+                background-color: transparent;
+                border: 1px solid transparent;
+                transition: all .1s linear;
+                outline: none;
+                &:focus{
+                  border: 1px solid $input-focusBorder;
+                  box-shadow: 0 0 2px $input-focusBorder;
+                  transition: all .1s linear;
+                }
+              }
+              >div{
+                &.inputDisable{
+                  position: absolute;
+                  border-radius: $border-radius;
+                  left: 0;
+                  top: 0;
+                  bottom: 0;
+                  right: 0;
+                  background-color: transparent;
+                  z-index: 2;
+                }
+              }
+            }
+            &.deliveryIdDisable{
+              background-color: $input-disableColor;
+            }
+          }
+          >span.cutOff{
+            margin: 0 15px;
+            font-size: 14px;
+          }
+          &.btnGroup{
+            text-align: center;
+            margin: 10px 0 25px 100px;
+            >button{
+              width: 75px;
+              height: 28px;
+              line-height: 28px;
+              border-radius: $border-radius;
+              color: #fff;
+              cursor: pointer;
+              &.queryBtn{
+                background-color: $queryBtn-bgColor;
+                border: 1px solid $queryBtn-bgColor;
+                margin-right: 15px;
+                &:hover{
+                  background-color: $queryBtn-hoverBgColor;
+                  border: 1px solid $queryBtn-hoverBgColor;
+                }
+              }
+              &.turnBtn{
+                border: 1px solid $header-bgColor;
+                color: #333;
+                background-color: $header-bgColor;
+                &:hover{
+                  border: 1px solid $queryBtn-hoverBgColor;
+                }
+              }
+              &.resetBtn{
+                background-color: $resetBtn-bgColor;
+                border: 1px solid $resetBtn-bgColor;
+                margin-right: 15px;
+                &:hover{
+                  background-color: $resetBtn-hoverBgColor;
+                  border: 1px solid $resetBtn-hoverBgColor;
+                }
+              }
+            }
+          }
+        }
+      }
+      >div{
+        &.btnGroup{
+          text-align: center;
+          margin: 10px 0 25px 0;
+          >button{
+            width: 75px;
+            height: 28px;
+            line-height: 28px;
+            border-radius: $border-radius;
+            color: #fff;
+            cursor: pointer;
+            &.queryBtn{
+              background-color: $queryBtn-bgColor;
+              border: 1px solid $queryBtn-bgColor;
+              margin-right: 15px;
+              &:hover{
+                background-color: $queryBtn-hoverBgColor;
+                border: 1px solid $queryBtn-hoverBgColor;
+              }
+            }
+            &.turnBtn{
+              border: 1px solid $header-bgColor;
+              color: #333;
+              background-color: $header-bgColor;
+              &:hover{
+                border: 1px solid $queryBtn-hoverBgColor;
+              }
+            }
+            &.resetBtn{
+              background-color: $resetBtn-bgColor;
+              border: 1px solid $resetBtn-bgColor;
+              margin-right: 15px;
+              &:hover{
+                background-color: $resetBtn-hoverBgColor;
+                border: 1px solid $resetBtn-hoverBgColor;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.tableBoxArea{
+      margin-top: 30px;
+      >div{
+        &.header{
+          border: 1px solid $border-color;
+          border-radius: $border-radius;
+          background-color: transparent;
+          height: $header-height;
+          line-height: $header-height;
+          >span{
+            margin-left: $title-paddding;
+            font-size: 12px;
+            font-weight: 600;
+          }
+        }
+        &.section{
+          >div{
+            &.tableArea{
+              td{
+                &.failNum,&.getDataFailNum,&.sendFailNum,&.returnFailNum{
+                  >span{
+                    color: $queryBtn-bgColor;
+                    cursor: pointer;
+                    padding: 0 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.receGetPandect,.sendMsg,.respMsg,.failMsg,.recSendMsg,.recAceMsg,.recRespMsg{
+  >li{
+    display: inline-block;
+    color: $queryBtn-bgColor;
+    cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+.failMsgDiaolog{
+  ul{
+    &.failsMsgArea{
+      padding-left: 30px;
+      >li{
+        text-align: left;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+.classJhdh{
+  >span{
+    >span{
+      &.jhdhLink{
+        color: $queryBtn-bgColor;
+        cursor: pointer;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+.handleoutFailMsg{
+  >span{
+    &.handleoutFailMsgLink{
+      color: $queryBtn-bgColor;
+      cursor: pointer;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.handleouRecMsg{
+  >span{
+    &.handleouRecMsgLink{
+      color: $queryBtn-bgColor;
+      cursor: pointer;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.repush{
+  >span{
+    color: $queryBtn-bgColor;
+    cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

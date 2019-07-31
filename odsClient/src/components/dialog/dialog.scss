@@ -1,0 +1,125 @@
+@import "../../asset/style/dominant.scss";
+$dialog-shadow-bgColor:#c1c1c1;
+$dialog-border-color:#eee;
+$dialog-border-radius:5px;
+$dialog-box-shadow-color:#efefef;
+$dialog-header-bgColor:#fafafa;
+$dialog-header-height:45px;
+$dialog-header-title-fontColor:#272733;
+$dialog-line-color:#e8e8e8;
+$dialog-btn-border-color:#d9d9d9;
+$dialog-btn-fontColor:#333;
+@mixin fullScreen{
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top:0;
+}
+div.modal{
+  position: fixed;
+  @include fullScreen;
+  z-index: 100;
+  height: 100%;
+  background-color: transparent;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  div.shadow{
+    position: fixed;
+    @include fullScreen;
+    z-index: -1;
+    background-color: $dialog-shadow-bgColor;
+    opacity: 0.5;
+    filter:Alpha(opacity=50);
+  }
+  div.modalArea{
+    border-radius: $dialog-border-radius;
+    box-shadow:$dialog-box-shadow-color;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    margin-top: 10%;
+    height:100%;
+    div{
+      &.header{
+        height:$dialog-header-height;
+        background-color: $dialog-header-bgColor;
+        padding: 0 15px;
+        border-bottom: 1px solid $dialog-border-color;
+        overflow: hidden;
+        line-height: $dialog-header-height;
+        p{
+          float: left;
+          font-size: 18px;
+          color: $dialog-header-title-fontColor;
+          font-weight: 300;
+        }
+        .cancleSign{
+          float: right;
+        }
+        .cancleSign:after{
+          content: "\2716";
+          font-size: 18px;
+          color: $dialog-header-title-fontColor;
+          transition: all .1s linear;
+        }
+        .cancleSign:hover:after{
+          color: $queryBtn-bgColor;
+          cursor: pointer;
+          transition: all .1s linear;
+        }
+      }
+      &.section{
+        background-color: #fff;
+        padding:15px;
+        height: 40%;
+        overflow-y: auto;
+        >pre{
+          >code{
+            white-space: pre-wrap!important;
+            word-wrap: break-word!important;
+            *white-space: normal!important;
+            height: 100%;
+            overflow-y: auto;
+          }
+        }
+      }
+      &.footer{
+        border-top: 1px solid $dialog-line-color;
+        text-align: center;
+        padding: 15px 0;
+        background-color: #fff;
+        button{
+          outline: 0;
+          border: 1px solid $dialog-btn-border-color;
+          background-color: transparent;
+          height: 28px;
+          padding: 0 10px;
+          border-radius: 5px;
+          cursor: pointer;
+          color: $dialog-btn-fontColor;
+          transition: all .1s linear;
+        }
+        button.btn-confirm{
+          border: 1px solid $queryBtn-bgColor;
+          background-color: $queryBtn-bgColor;
+          color: white;
+          transition: all .1s linear;
+          margin-right: 10px;
+          &:hover{
+            border: 1px solid $queryBtn-hoverBgColor;
+            background-color: $queryBtn-hoverBgColor;
+            transition: all .1s linear;
+          }
+        }
+        button.btn-cancel{
+          &:hover{
+            border: 1px solid $queryBtn-bgColor;
+            color: $queryBtn-bgColor;
+            transition: all .1s linear;
+          }
+        }
+      }
+    }
+  }
+}

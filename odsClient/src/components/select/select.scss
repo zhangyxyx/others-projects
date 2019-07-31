@@ -1,0 +1,86 @@
+@import "../../asset/style/dominant.scss";
+$select-cutOff-lineColor:#e6e6e6;
+$select-cutOff-lineColor:#e6e6e6;
+$select-hoveBgColor:#ebf5ff;
+$select-activeBgColor:#f5faff;
+$select-height:28px;
+$select-width:172px;
+.selectBox{
+  width: $select-width;
+  display: inline-block;
+  position: relative;
+  >div{
+    >div{
+      &.shadow{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: transparent;
+        z-index: 100;
+        border-radius: $border-radius;
+      }
+    }
+    label{
+      position: relative;
+      width: 100%;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      line-height: $select-height;
+      height: $select-height;
+      border-radius: 3px;
+      border: 1px solid $input-borderColor;
+      text-indent: 10px;
+      &.isDisabled{
+        background-color: $input-disableColor;
+      }
+    }
+    label:after{
+      position: absolute;
+      right: 5px;
+      top: 0;
+      content: '\25BC';
+      color:#999;
+      font-size: 10px;
+    }
+    label.openOption{
+      border-bottom-color: $select-cutOff-lineColor;
+      border-radius: 3px 3px 0 0;
+    }
+    label.openOption:after{
+      content: '\25B2';
+    }
+  }
+
+  ul{
+    width: 100%;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: $select-height+2px;
+    z-index: 200;
+    border-radius:0 0 3px 3px;
+    border: 1px solid $input-borderColor;
+    border-top: none;
+    font-size: 14px;
+    max-height: 230px;
+    overflow-y: auto;
+    li{
+      list-style: none;
+      padding-left: 10px;
+      line-height: 23px;
+      background-color: white;
+      box-sizing: border-box;
+    }
+    li:hover{
+      background-color: $select-hoveBgColor;
+      cursor: pointer;
+    }
+    .active{
+      background-color: $select-activeBgColor;
+    }
+  }
+}
+

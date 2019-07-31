@@ -1,0 +1,108 @@
+@import "../../asset/style/dominant.scss";
+$table-border-color:#d8d8d8;//表格边框颜色
+$table-bgColor:#fff;//表格背景颜色
+$table-even-bgColor:#fff;//表格背景换色
+$table-fontColor:#626161;//表格字体颜色
+$table-fontSize:14px;//表格字体大小
+$thead-bgColor:rgb(235, 242, 246);//表头背景颜色
+$tr-hover-bgColor:#f5f5f5;//每行移入背景颜色
+$sort-shortSize:4px;//排序三角行短边的大小
+$sort-longSize:6px;//排序三角行长边的大小
+$table-trHeight:35px;
+div.tableBox{
+  >div{
+    &.tableArea{
+      overflow-x: auto;
+      table{
+        font-size: $table-fontSize;
+        border:1px solid $table-border-color;
+        border-bottom: none;
+        background-color: $table-bgColor;
+        border-radius: 5px;
+        overflow: hidden;
+        div.checkBox{
+          >span:first-child{
+            display: inline-block;
+            border: 1px solid $table-fontColor;
+            transition: all .1s linear;
+          }
+          >span.Checked{
+            border: 1px solid $dominant-hue;
+            transition: all .1s linear;
+          }
+        }
+        thead{
+          background-color: $thead-bgColor;
+          >tr{
+            height: $table-trHeight;
+          }
+        }
+        th{
+          border-bottom: 1px solid $table-border-color;
+          ul.attachSign{
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 5px;
+            li{
+              list-style: none;
+              width: 0;
+              height: 0;
+              cursor: pointer;
+              &.asc{
+                border-left: $sort-shortSize solid transparent;
+                border-right: $sort-shortSize solid transparent;
+                border-bottom: $sort-longSize solid $table-border-color;
+                margin-bottom: 3px;
+                transition: all .1s linear;
+                &:hover{
+                  border-bottom: $sort-longSize solid $dominant-hue;
+                  transition: all .1s linear;
+                }
+              }
+              &.des{
+                border-left: $sort-shortSize solid transparent;
+                border-right: $sort-shortSize solid transparent;
+                border-top: $sort-longSize solid $table-border-color;
+                transition: all .1s linear;
+                &:hover{
+                  border-top: $sort-longSize solid $dominant-hue;
+                  transition: all .1s linear;
+                }
+              }
+            }
+          }
+        }
+      }
+      .tbodyControl{
+        text-align: center;
+        tr{
+          height: $table-trHeight;
+          transition: all .1s linear;
+          &:nth-child(even){background:$table-even-bgColor;}
+          &:hover{
+            background-color: $tr-hover-bgColor;
+            transition: all .1s linear;
+          }
+          td{
+            color: $table-fontColor;
+            border-bottom: 1px solid $table-border-color;
+          }
+        }
+      }
+    }
+  }
+}
+div.hasBoder{
+    th{
+      border-right:1px solid $table-border-color;
+      &:last-child{
+        border-right: none;
+      }
+    }
+    td{
+      border-right:1px solid $table-border-color;
+      &:last-child{
+        border-right: none;
+      }
+    }
+}

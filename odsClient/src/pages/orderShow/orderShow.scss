@@ -1,0 +1,108 @@
+@import "../../asset/style/dominant.scss";
+.orderQuery{
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+  >div{
+    &.condition{
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+      >div{
+        &.header{
+          background-color: $header-bgColor;
+          border-bottom: 1px solid $border-color;
+          height: $header-height;
+          line-height: $header-height;
+          >span{
+            margin-left: $title-paddding;
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+      }
+      >ul{
+        padding: 20px $title-paddding 0 $title-paddding;
+        >li{
+          margin-bottom: 20px;
+          display: inline-block;
+          >label{
+            display: inline-block;
+            font-size: 14px;
+            width: $label-width;
+            text-align: right;
+            padding-left: 20px;
+            margin-right: 10px;
+          }
+          >input{
+            width: $input-width;
+            height: $input-height;
+            line-height: $input-height;
+            border-radius: $border-radius;
+            background-color: transparent;
+            border: 1px solid $input-borderColor;
+            padding-left: 6px;
+            transition: all .1s linear;
+            &:focus{
+              border: 1px solid $input-focusBorder;
+              box-shadow: 0 0 2px $input-focusBorder;
+              transition: all .1s linear;
+            }
+          }
+          >span.cutOff{
+            margin: 0 15px;
+            font-size: 14px;
+          }
+        }
+      }
+      >div{
+        &.btnGroup{
+          text-align: center;
+          margin: 10px 0 25px 0;
+          >button{
+            width: 75px;
+            height: 28px;
+            line-height: 28px;
+            border-radius: $border-radius;
+            color: #fff;
+            cursor: pointer;
+            &.queryBtn{
+              background-color: $queryBtn-bgColor;
+              border: 1px solid $queryBtn-bgColor;
+              margin-right: 15px;
+              &:hover{
+                background-color: $queryBtn-hoverBgColor;
+                border: 1px solid $queryBtn-hoverBgColor;
+              }
+            }
+            &.resetBtn{
+              background-color: $resetBtn-bgColor;
+              border: 1px solid $resetBtn-bgColor;
+              margin-right: 15px;
+              &:hover{
+                background-color: $resetBtn-hoverBgColor;
+                border: 1px solid $resetBtn-hoverBgColor;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.tableArea{
+      margin-top: 20px;
+    }
+  }
+}
+
+.generallView{
+  >li{
+    &.generallViewOption{
+      display: inline-block;
+      color: $queryBtn-bgColor;
+      cursor: pointer;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
