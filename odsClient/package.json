@@ -57,7 +57,7 @@
     "es6-promise": "^4.2.4",
     "export-from-ie8": "^1.0.5",
     "mockjs": "^1.0.1-beta3",
-    "moment": "^2.22.1",
+    "moment": "^2.29.2",
     "rc-calendar": "^9.6.1",
     "react": "0.x.x",
     "react-dom": "0.x.x",
